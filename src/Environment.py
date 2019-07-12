@@ -4,10 +4,7 @@ import random
 
 from Vector import Vector
 from Obstacle import Obstacle
-# from Population import Population
 
-# SCREEN_SIZE_X = 1920
-# SCREEN_SIZE_Y = 1080
 
 class Environment:
     """

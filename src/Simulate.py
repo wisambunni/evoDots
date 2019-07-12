@@ -6,7 +6,6 @@ from time import sleep
 
 ENV = Environment(1920,1080)
 POPULATION = Population(1000, ENV)
-ENV.exited()
 
 while True:
     ENV.exited()
@@ -20,4 +19,3 @@ while True:
         POPULATION.perform_natural_selection()
         POPULATION.mutate_babies()
 
-    # ENV.redraw(POPULATION)

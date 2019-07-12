@@ -1,10 +1,10 @@
 import pygame
 import random
 import math
-import numpy as np
 
 from Dot import Dot
 from Environment import Environment
+
 
 class Population:
     """
@@ -12,10 +12,10 @@ class Population:
     Consists of Dots used for the simulation.
 
     :param size: Quantity of dots.
-    :type size: int
+    :type size: int.
 
     :param env: Environment that population is working in.
-    :type env: Environment
+    :type env: Environment.
     """
     def __init__(self, size, env):
         self.POPULATION_SIZE = size
@@ -71,7 +71,6 @@ class Population:
         
         self.samples = next_generation
         self.generation += 1
-        # print(self.generation)
         Dot.dead = 0
         self.fitness_sum = 0
 
@@ -131,7 +130,6 @@ class Population:
                 max_idx = d
         
         self.best_dot = max_idx
-        # self.samples[self.best_dot].set_fittest(self.ENV.START_POINT)
     
         if self.samples[self.best_dot].goal_found:
             min_step = self.samples[self.best_dot].genetics.step

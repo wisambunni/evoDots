@@ -1,12 +1,12 @@
 import pygame
 import random
 import math
-import numpy as np
 
 from Movements import Movements
 from Vector import Vector
 from Environment import Environment
 from Genetics import Genetics
+
 
 class Dot:
     """

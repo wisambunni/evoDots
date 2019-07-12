@@ -1,5 +1,6 @@
 import pygame
 
+
 class Obstacle:
     """
     Used to create an obstacle of different parameters.
@@ -14,11 +15,10 @@ class Obstacle:
     :type length: int.
 
     :param width: The width of the obstacle.
-    :type width: int
+    :type width: int.
 
     :param color: The color of the obstacle.
-    :type color: tuple(int,int,int)
-
+    :type color: tuple(int,int,int).
     """
     def __init__(self, x=100, y=100, length=100, width=50, color=(0,0,255)):
         self.length = length
