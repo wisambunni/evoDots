@@ -12,10 +12,10 @@ class Population:
     Consists of Dots used for the simulation.
 
     :param size: Quantity of dots.
-    :type size: int.
+    :type size: int
 
     :param env: Environment that population is working in.
-    :type env: Environment.
+    :type env: Environment
     """
     def __init__(self, size, env):
         self.POPULATION_SIZE = size
@@ -36,7 +36,7 @@ class Population:
 
     def move_dots(self):
         """
-        Moves a dot in the simulation environment
+        Moves a dot in the simulation environment.
         """
         for dot in self.samples:
             dot.make_decision(self.ENV, self.POSSIBLE_STEPS)
@@ -44,7 +44,10 @@ class Population:
 
     def extinct(self):
         """
-        Determines whether all the dots in the population are dead
+        Determines whether all the dots in the population are dead.
+
+	:return: Whether a population of dots are dead.
+	:rtype: bool
         """
         return Dot.dead == self.POPULATION_SIZE
 
@@ -96,6 +99,9 @@ class Population:
     def select_parent(self):
         """
         Selects a parent for the next generation based on the best fitness score.
+
+	:return: The best performing dot.
+	:rtype: Dot
         """
         rand = random.uniform(0, self.fitness_sum)
 

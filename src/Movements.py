@@ -7,7 +7,7 @@ class Movements:
     Responsible for moving dots in the environment.
 
     :param start_point: Starting position of a dot.
-    :type start_point: float.
+    :type start_point: float
     """
     def __init__(self, start_point):
         self.point = Vector(start_point.x, start_point.y)
@@ -30,7 +30,10 @@ class Movements:
         Checks if a dot ran into an obstacle.
 
         :param env: The simulation environment.
-        :type env: Environment.
+        :type env: Environment
+	
+	:return: Whether a dot runs into an obstacle.
+	:rtype: bool
         """
         for obstacle in env.obstacles:
             if (obstacle.x < self.point.x < obstacle.x+obstacle.length and
@@ -44,7 +47,10 @@ class Movements:
         Checks if a dot ran into the wall.
         
         :param env: The simulation environment.
-        :type env: Environment.
+        :type env: Environment
+
+	:return: Whether a dot runs into a wall.
+	:rtype: bool
         """
         return not(0 < self.point.x < env.SCREEN_SIZE_X-2 and
                    0 < self.point.y < env.SCREEN_SIZE_Y-2)
@@ -55,7 +61,10 @@ class Movements:
         Checks if a dot ran into the goal.
 
         :param env: The simulation environment.
-        :type env: Environment.
+        :type env: Environment
+
+	:return: Whether a dot runs into the goal.
+	:rtype: bool
         """
         return self.point.distance_to(env.END_POINT) < 10
     

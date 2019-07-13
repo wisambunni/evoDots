@@ -11,7 +11,7 @@ class Genetics:
     Used to determine the path to take in the envinroment.
 
     :param size: The size of the population.
-    :type size: int.
+    :type size: int
     """
     def __init__(self, size):
         self.size = size
@@ -35,6 +35,9 @@ class Genetics:
     def clone(self):
         """
         Clones the current directions of a dot.
+
+	:return: A clone of directions.
+	:rtype: list
         """
         clone = Genetics(len(self.directions))
         for i in range(len(self.directions)):

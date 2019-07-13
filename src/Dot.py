@@ -14,7 +14,7 @@ class Dot:
     Used to represent the "beings" in the simulation.
 
     :param start_point: The starting position of the dot.
-    :type start_point: Vector.
+    :type start_point: Vector
     """
     dead = 0
     def __init__(self, start_point):
@@ -36,7 +36,7 @@ class Dot:
         :type env: Environment.
 
         :param steps_in_path: The number of steps possible in the environment.
-        :type steps_in_path: int.
+        :type steps_in_path: int
         """
 
         if self.is_alive(env):
@@ -57,7 +57,10 @@ class Dot:
         to the goal.
         
         :param end_point: The end point.
-        :type end_point: Vector.
+        :type end_point: Vector
+
+	:return: The fitness score of a dot.
+	:rtype: float
         """
         # Reward dots that find the goal.
         if self.goal_found:
@@ -82,7 +85,10 @@ class Dot:
         or into the goal.
 
         :param env: The simulation environment.
-        :type env: Environment.
+        :type env: Environment
+
+	:return: Whether a dot is alive or not.
+	:rtype: bool
         """
         # Check if a dot hits the edge of the env
         if self.alive and self.movement.wall_hit(env):
@@ -108,7 +114,10 @@ class Dot:
         Creates a clone based on the current dot.
         
         :param start_point: The starting point of the dot.
-        :type start_point: Vector.
+        :type start_point: Vector
+
+	:return: An 'offspring' of a dot.
+	:rtype: Dot
         """
         baby = Dot(start_point)
         baby.genetics = self.genetics.clone()

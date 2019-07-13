@@ -22,6 +22,7 @@ class Vector:
     def add(self, point):
         """
         Adds distance to the object.
+
         :param point: New distance.
         :type points: Vector
         """

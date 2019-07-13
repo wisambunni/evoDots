@@ -50,7 +50,7 @@ class Environment:
         Creates obstacles of random shape, size, and location.
 
         :param size: The number of obstacles to create.
-        :type size: int.
+        :type size: int
         """
         # minimum distance an obstacle should spawn from either start or end points.
         min_from_start = int(self.START_POINT.y - (self.START_POINT.y*.2))
