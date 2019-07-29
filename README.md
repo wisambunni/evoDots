@@ -12,7 +12,7 @@ A simple project using genetic algorithms to make dots towards a goal without be
 >```
 
 ## Overview
-![Demo 1](https://github.com/wisambunni/evoDots/blob/master/res/test1.gif)
+![Demo 1](res/test1.gif)
 ![Demo 2](res/test2.gif)
 ![Demo 3](res/test3.gif)
 
