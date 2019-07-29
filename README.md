@@ -12,9 +12,9 @@ A simple project using genetic algorithms to make dots towards a goal without be
 >```
 
 ## Overview
-![Demo 1] (https://github.com/wisambunni/evoDots/blob/master/res/test1.gif)
-![Demo 2] (res/test2.gif)
-![Demo 3] (res/test3.gif)
+![Demo 1](https://github.com/wisambunni/evoDots/blob/master/res/test1.gif)
+![Demo 2](res/test2.gif)
+![Demo 3](res/test3.gif)
 
 The dots begin from the bottom green circle. They start their lives randomly in the beginning, taking any direction whatsoever. Once the whole population dies, the system runs through calculations to determine the best performing dot in terms of getting closest to the goal. 
 That dot is then selected as the "parent" of the next generation, and the dots of the next generation will be copies of that parent with slight mutations. Rinse and repeat until eventually a dot emerges that is able to bypass all the randomly-generated obstacles and find the goal (red dot).
