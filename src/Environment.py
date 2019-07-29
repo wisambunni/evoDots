@@ -61,7 +61,7 @@ class Environment:
         max_len = int(self.SCREEN_SIZE_X * 0.3)
 
         # min and max width the obstacle can be
-        min_width = 10
+        min_width = 15
         max_width = 50
 
         x_boundary = int(self.SCREEN_SIZE_X * 0.05)
@@ -102,9 +102,8 @@ class Environment:
             if dot.most_fit:
                 self.line_points.append((dot.movement.point.x, dot.movement.point.y))
                 pygame.draw.lines(self.screen, (0,255,0), False, self.line_points, 3)
-                # pygame.draw.rect(self.screen, (0,255,0), (dot.movement.point.x, dot.movement.point.y, 5, 5), 0)
+                pygame.draw.circle(self.screen, dot.color, (int(dot.movement.point.x), int(dot.movement.point.y)), 3)
             else:
-                # pygame.draw.rect(self.screen, dot.color, (dot.movement.point.x, dot.movement.point.y, 5, 5), 0)
                 pygame.draw.circle(self.screen, dot.color, (int(dot.movement.point.x), int(dot.movement.point.y)), 3)
         
         for obstacle in self.obstacles:
